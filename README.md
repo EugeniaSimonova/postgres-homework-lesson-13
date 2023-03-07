@@ -18,23 +18,23 @@ https://github.com/akopytov/sysbench) или через утилиту pgbench (
 postgres@ees-09:~$ pgbench -c 50 -j 2 -P 10 -T 60 postgres
 pgbench (14.7 (Ubuntu 14.7-1.pgdg22.04+1))
 starting vacuum...end.
-progress: 10.0 s, 4432.2 tps, lat 11.197 ms stddev 10.829
-progress: 20.0 s, 4463.9 tps, lat 11.197 ms stddev 10.938
-progress: 30.0 s, 4450.8 tps, lat 11.237 ms stddev 10.787
-progress: 40.0 s, 4229.8 tps, lat 11.819 ms stddev 11.424
-progress: 50.0 s, 4370.5 tps, lat 11.439 ms stddev 10.757
-progress: 60.0 s, 4347.3 tps, lat 11.497 ms stddev 11.171
+progress: 10.0 s, 4406.4 tps, lat 11.261 ms stddev 10.410
+progress: 20.0 s, 4417.3 tps, lat 11.322 ms stddev 11.170
+progress: 30.0 s, 4635.1 tps, lat 10.778 ms stddev 10.527
+progress: 40.0 s, 4635.9 tps, lat 10.787 ms stddev 10.556
+progress: 50.0 s, 4500.6 tps, lat 11.113 ms stddev 10.810
+progress: 60.0 s, 4480.3 tps, lat 11.156 ms stddev 11.084
 transaction type: <builtin: TPC-B (sort of)>
 scaling factor: 1
 query mode: simple
 number of clients: 50
 number of threads: 2
 duration: 60 s
-number of transactions actually processed: 262994
-latency average = 11.400 ms
-latency stddev = 10.997 ms
-initial connection time = 61.989 ms
-tps = 4383.173941 (without initial connection time)
+number of transactions actually processed: 270804
+latency average = 11.071 ms
+latency stddev = 10.775 ms
+initial connection time = 64.200 ms
+tps = 4513.819785 (without initial connection time)
 ```
 
 ```
@@ -85,4 +85,6 @@ autovacuum_vacuum_threshold = 25
 autovacuum_vacuum_scale_factor = 0.05
 autovacuum_vacuum_cost_delay = 10
 autovacuum_vacuum_cost_limit = 1000
+fsync=false
+
 ```
